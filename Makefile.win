@@ -1,0 +1,37 @@
+# Project: semester_project
+# Makefile created by Embarcadero Dev-C++ 6.3
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = main.o userui.o fileop.o gameui.o
+LINKOBJ  = main.o userui.o fileop.o gameui.o
+LIBS     = -L"C:/Program Files (x86)/Embarcadero/EMB-Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/lib32" -static-libgcc -lbgi -lgdi32 -lcomdlg32 -luuid -loleaut32 -lole32 -L"C:/Program Files (x86)/Embarcadero/EMB-Dev-Cpp/TDM-GCC-64/lib" -mwindows -lbgi  -lgdi32  -lcomdlg32  -luuid  -loleaut32  -lole32 -m32
+INCS     = -I"C:/Program Files (x86)/Embarcadero/EMB-Dev-Cpp/TDM-GCC-64/include" -I"C:/Program Files (x86)/Embarcadero/EMB-Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Embarcadero/EMB-Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include" -I"C:/Program Files (x86)/Embarcadero/EMB-Dev-Cpp/TDM-GCC-64/include"
+CXXINCS  = -I"C:/Program Files (x86)/Embarcadero/EMB-Dev-Cpp/TDM-GCC-64/include" -I"C:/Program Files (x86)/Embarcadero/EMB-Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Embarcadero/EMB-Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include" -I"C:/Program Files (x86)/Embarcadero/EMB-Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++" -I"C:/Program Files (x86)/Embarcadero/EMB-Dev-Cpp/TDM-GCC-64/include"
+BIN      = semester_project.exe
+CXXFLAGS = $(CXXINCS) -m32 -std=c++11 -std=c++11
+CFLAGS   = $(INCS) -m32 -std=c++11
+DEL      = C:\Program Files (x86)\Embarcadero\EMB-Dev-Cpp\devcpp.exe INTERNAL_DEL
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${DEL} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+userui.o: userui.cpp
+	$(CPP) -c userui.cpp -o userui.o $(CXXFLAGS)
+
+fileop.o: fileop.cpp
+	$(CPP) -c fileop.cpp -o fileop.o $(CXXFLAGS)
+
+gameui.o: gameui.cpp
+	$(CPP) -c gameui.cpp -o gameui.o $(CXXFLAGS)
