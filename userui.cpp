@@ -134,20 +134,33 @@ bool component_click(int mx, int my) {
 
 void history_interference() {
     background_image();
+    title();
     back_button();
 
+    // Expanded outer panel
+    setcolor(WHITE);
+    rectangle(327, 151, 838, 645); // Increased height
+    setfillstyle(SOLID_FILL, LIGHTGRAY);
+    bar(328, 152, 837, 644);
+
+    // Expanded inner panel
+    rectangle(343, 165, 823, 627);
+    setfillstyle(SOLID_FILL, BLACK);
+    bar(344, 166, 822, 626);
+
+    // Title
     settextstyle(SIMPLEX_FONT, HORIZ_DIR, 3);
     setcolor(WHITE);
-    outtextxy(400, 150, "Game History");
+    outtextxy(470, 180, "Game History");
 
+    // Load and sort users
     load_users_from_file();
     sort_users_by_score();
 
-    setcolor(WHITE);
+    // Display top 8 users
+    int start_y = 240;  // Start higher to fit all 8
     settextstyle(DEFAULT_FONT, HORIZ_DIR, 2);
-
-    int start_y = 600;
-    for (int i = 0; i < total_users; i++) {
+    for (int i = 0; i < total_users && i < 8; i++) {
         if (i == 0) setcolor(YELLOW);
         else if (i == 1) setcolor(LIGHTGRAY);
         else if (i == 2) setcolor(BROWN);
@@ -155,19 +168,27 @@ void history_interference() {
 
         char display[200];
         sprintf(display, "%d. %s - %d", i + 1, all_users[i].name, all_users[i].score);
-        outtextxy(100, start_y, display);
-        start_y -= 40;
+        outtextxy(370, start_y, display);
+        start_y += 42;  // Slightly tighter spacing to fit 8 rows
+
+        // Line separator
+        setcolor(LIGHTGRAY);
+        line(350, start_y - 10, 815, start_y - 10);
     }
 
+    // Wait for click
     while (true) {
         if (ismouseclick(WM_LBUTTONDOWN)) {
             getmouseclick(WM_LBUTTONDOWN, x, y);
+            clearmouseclick(WM_LBUTTONDOWN);
             if (component_click(x, y))
                 break;
         }
         delay(100);
     }
 }
+
+
 
 void user_interference() {
     background_image();

@@ -30,37 +30,6 @@ void health_dead()
 }
 
 
-
-void user_bullets_fire(Bullet bullets[], Enemy enemies[], User &current_user)
-{
-    for (int i = 0; i < MAX_BULLETS; i++) {
-        if (!bullets[i].active) continue;
-
-        for (int j = 0; j < 5; j++) {
-            // Skip inactive enemies (corrected logic)
-            if (enemies[j].speedX == 0 && enemies[j].speedY == 0) continue;
-
-            // Check collision
-            if (abs(bullets[i].x - enemies[j].x) < 15 &&
-                abs(bullets[i].y - enemies[j].y) < 15) {
-                Beep(850, 200);
-                bullets[i].active = false;
-                
-                // Disable enemy
-                enemies[j].speedX = 0;
-                enemies[j].speedY = 0;
-                
-                // Increase score
-                current_user.score += 10;
-                
-                // Update global score (important for UI)
-                extern int score;
-                score = current_user.score;
-            }
-        }
-    }
-}
-
 void check_collision_ship(Enemy &enemy)
 {
     // Check if enemy reached bottom of screen
@@ -112,5 +81,38 @@ void score_increase(User &current_user)
         setcolor(YELLOW);
         settextstyle(SIMPLEX_FONT, HORIZ_DIR, 2);
         outtextxy(SCREEN_WIDTH/2 - 150, SCREEN_HEIGHT/2, msg);
+    }
+}
+
+void user_bullets_fire(Bullet bullets[], Enemy enemies[], User &current_user)
+{
+    for (int i = 0; i < MAX_BULLETS; i++) {
+        if (!bullets[i].active) 
+            continue;
+
+        for (int j = 0; j < 5; j++) {
+            // Skip inactive enemies
+            if (enemies[j].speedX == 0 && enemies[j].speedY == 0) 
+                continue;
+
+            // Check collision
+            if (abs(bullets[i].x - enemies[j].x) < 15 &&
+                abs(bullets[i].y - enemies[j].y) < 15) {
+
+                Beep(850, 200);
+                bullets[i].active = false;
+
+                // ✅ Corrected: Reset the specific enemy that was hit
+                enemies[j].x = rand() % (SCREEN_WIDTH - 100) + 50;
+                enemies[j].y = 0;
+
+                // Increase score
+                current_user.score += 10;
+
+                // Update global score
+                extern int score;
+                score = current_user.score;
+            }
+        }
     }
 }

@@ -4,7 +4,7 @@
 #include "collision.h"
 
 int ENEMY_SPEED = 5;
-int userSpeed = 25;
+int userSpeed = 35;
 int score = 0;
 int health = 3;
 
