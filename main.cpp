@@ -5,6 +5,7 @@
 #include "fileop.h"
 #include "collision.h"
 
+
 int main()
 {
       initwindow(MAX_WIDTH, MAX_HEIGHT, "War Space Game");  // Initialize graphics window

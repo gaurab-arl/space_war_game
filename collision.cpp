@@ -6,18 +6,19 @@
 
 extern int health;
 extern int score;
-extern bool isGameOver; // ✅ VERY IMPORTANT
+extern bool isGameOver; 
 
 void check_sky_bullets(Bullet &bullet)
 {
     extern int shipPosX, shipPosY;
 
-    if (bullet.x >= shipPosX - 10 && bullet.x <= shipPosX + 10 &&
-        bullet.y >= shipPosY - 10 && bullet.y <= shipPosY + 10)
+    if (bullet.x >= shipPosX - 20 && bullet.x <= shipPosX + 20 &&
+        bullet.y >= shipPosY - 20 && bullet.y <= shipPosY + 20)
     {
         Beep(600, 200);
         health--;
         health_dead();
+        
     }
 }
 
@@ -26,6 +27,7 @@ void health_dead()
     if (health <= 0)
     {
         isGameOver = true; // ✅ Also set game over here
+        game_over();
     }
 }
 
