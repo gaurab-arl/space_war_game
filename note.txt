@@ -1,0 +1,46 @@
+ planning to implement:
+
+Two enemy types: one moving left to right while firing bullets, and another spawning and moving downward
+Random bullets appearing across the screen
+A health system where the spaceship has 3 HP before game over
+A reward system with coins appearing during gameplay
+
+Create sprite classes for your player ship, enemies, bullets, and coins
+Implement the movement patterns you described
+Add collision detection for bullets, enemies, and coins
+Create a health system with visual indicators
+Add a scoring/coin collection system
+
+semester_project files divison
+¦-- main.cpp        --> Entry point of the program
+¦-- userui.h        --> Header file for user input and menu
+¦-- userui.cpp      --> Implementation of user input and menu
+¦-- gameui.h        --> Header file for game interface (not used yet)
+¦-- gameui.cpp      --> Implementation of game (empty for now)
+¦-- fileop.h        --> Header file for file input and output
+¦-- fileop.cpp      --> Implementation of all game file 
+
+
+-> Explanation
+extern in userui.h tells the compiler that these variables exist somewhere but are defined in another file.
+int x, y; and User_name user; are actually defined in userui.cpp, so there are no duplicate definitions.
+
+-> setcolor(WHITE);
+    rectangle(40, 30, 140, 70);
+    setfillstyle(SOLID_FILL, BLACK);
+    bar(41, 31, 139, 69);
+    when using baar first x , y coordinatae should be higher coordinate 
+      
+-> bar is a type of recatngle filled with color , rectangle may not be used if we does not need outline with different color
+
+      
+->   while (!kbhit()) {                                        // until key is hit it runs
+        if (ismouseclick(WM_LBUTTONDOWN)) { 
+            getmouseclick(WM_LBUTTONDOWN, x, y);
+            printf("%d \t %d \n ", x, y);                     // Print coordinates
+        }
+    } 
+    
+--     clearmouseclick(WM_LBUTTONDOWN);
+
+--   setbkcolor(BLACK);  
