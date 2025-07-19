@@ -189,19 +189,20 @@ void moveShip() {
     static bool spaceReleased = true; // Prevents continuous firing when space held down
     
     // Handle left/right movement with boundary checking
-    if (GetAsyncKeyState(VK_LEFT) && shipPosX > 20) 
+/*    if (GetAsyncKeyState(VK_LEFT) && shipPosX > 20) 
         shipPosX -= userSpeed;  // Move left if not at left boundary
     if (GetAsyncKeyState(VK_RIGHT) && shipPosX < SCREEN_WIDTH - 20) 
         shipPosX += userSpeed;  // Move right if not at right boundary
+*/
     
     // Alternative movement controls (WASD)
-    if (GetAsyncKeyState('A') && shipPosX > 20) 
+    if (GetAsyncKeyState('Z') && shipPosX > 20) 
         shipPosX -= userSpeed;  // Move left with 'A' key
-    if (GetAsyncKeyState('D') && shipPosX < SCREEN_WIDTH - 20) 
+    if (GetAsyncKeyState('C') && shipPosX < SCREEN_WIDTH - 20) 
         shipPosX += userSpeed;  // Move right with 'D' key
 
     // Handle shooting with space bar or 'W' key
-    if (GetAsyncKeyState(VK_SPACE) || GetAsyncKeyState('W')) {
+    if (GetAsyncKeyState(VK_SPACE) || GetAsyncKeyState('X')) {
         if (spaceReleased) {     // Only fire if key was previously released
             fireBullet();        // Create new bullet
             spaceReleased = false; // Mark key as pressed
