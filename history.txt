@@ -1,4 +1,4 @@
-gaurab 20
+gaurab 140
 gaurab 0
 gaurab 20
 gaurab 0
@@ -67,5 +67,24 @@ gaura 10
 as 10
 gaura 0
 as 10
-gaura as 20
-gaura as 20
+gaura 0
+as 20
+gaura 0
+as 20
+gaurab 130
+gggggggg 0
+gggggggg 0
+gggggggg 0
+gggggggg 0
+gggggggg 0
+gggggggg 0
+gggggggg 0
+gggggggg 0
+hhhddddd 0
+hhhddddd 0
+hhhddddd 0
+hhhddddd 0
+hhhddddd 0
+gaurab 140
+gaurba  90
+gaurba  90

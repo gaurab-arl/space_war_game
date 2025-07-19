@@ -1,4 +1,4 @@
- planning to implement:
+planning to implement:
 
 Two enemy types: one moving left to right while firing bullets, and another spawning and moving downward
 Random bullets appearing across the screen
@@ -12,13 +12,13 @@ Create a health system with visual indicators
 Add a scoring/coin collection system
 
 semester_project files divison
-¦-- main.cpp        --> Entry point of the program
-¦-- userui.h        --> Header file for user input and menu
-¦-- userui.cpp      --> Implementation of user input and menu
-¦-- gameui.h        --> Header file for game interface (not used yet)
-¦-- gameui.cpp      --> Implementation of game (empty for now)
-¦-- fileop.h        --> Header file for file input and output
-¦-- fileop.cpp      --> Implementation of all game file 
+Â¦-- main.cpp        --> Entry point of the program
+Â¦-- userui.h        --> Header file for user input and menu
+Â¦-- userui.cpp      --> Implementation of user input and menu
+Â¦-- gameui.h        --> Header file for game interface (not used yet)
+Â¦-- gameui.cpp      --> Implementation of game (empty for now)
+Â¦-- fileop.h        --> Header file for file input and output
+Â¦-- fileop.cpp      --> Implementation of all game file 
 
 
 -> Explanation
