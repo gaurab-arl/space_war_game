@@ -7,12 +7,7 @@
 HistoryUser all_users[100];  // Array to store all users from history file (max 100 users)
 int total_users = 0;         // Counter for total number of users loaded from file
 
-/**
- * Function: check_score(const User& current_user)
- * Purpose: Manages user score history - updates existing users or adds new ones
- * This function handles the core logic of maintaining high scores in the history file
- * Parameters: current_user - reference to current user whose score needs to be checked/updated
- */
+
 void check_score(const User& current_user) {
     // Open history file for reading to load existing user data
     FILE* fp = fopen("histo-ry.txt", "r");
@@ -20,7 +15,7 @@ void check_score(const User& current_user) {
     bool user_found = false;   // Flag to track if current user exists in history
     
 
-    
+
     // Load all existing users from file if it exists
     if (fp != NULL) {
         // Read each line containing username and score until end of file
@@ -58,17 +53,12 @@ void check_score(const User& current_user) {
 }
 
 /**
- * Function: save_user_info(const User& current_user)
  * Purpose: Save user information to the history file
  * This function is the main interface for saving user data
- * Parameters: current_user - reference to user whose info needs to be saved
- * 
- * NOTE: This function has a logical issue - it calls check_score() which already
- * saves the data, then tries to append to the file again, potentially creating duplicates
  */
 void save_user_info(const User& current_user) {
     // First check and update the user's score in history
-    check_score(current_user);
+    // check_score(current_user);
     
     // Open history file in append mode
     FILE* fp = fopen("history.txt", "a");

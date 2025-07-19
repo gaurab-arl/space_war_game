@@ -88,3 +88,4 @@ hhhddddd 0
 gaurab 140
 gaurba  90
 gaurba  90
+gaubra 0

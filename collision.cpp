@@ -24,8 +24,7 @@ void user_bullets_fire(Bullet bullets[], Enemy enemies[], User &current_user)
     bullets[i].x >= enemies[j].x - (35 - (bullets[i].y - (enemies[j].y - 35))) &&
     bullets[i].x <= enemies[j].x + (35 - (bullets[i].y - (enemies[j].y - 35))))
 {
-
-
+                  ////sound during collision
                 Beep(850, 200);
                 bullets[i].active = false;
 
