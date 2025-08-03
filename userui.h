@@ -24,10 +24,10 @@ extern User current_user;
 // Function declarations
 void title();
 void background_image();
-void give_coordinate();
 void give_name();
 void back_button();
 bool component_click(int x, int y);
 void history_interference();
-void user_interference();  
+void user_interference();
+
 #endif

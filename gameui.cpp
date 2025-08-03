@@ -10,7 +10,7 @@ int userSpeed = 30;         // Speed at which player ship moves
 int score = 0;              // Current game score
 int health = 3;             // Player's remaining health points
 
-// Game object arrays
+// Game object arraysi
 Enemy enemies[5];                    // Array to store 5 enemy objects
 Bullet bullets[MAX_BULLETS];        // Array for player's bullets
 Bullet skyBullets[MAX_SKY_BULLETS]; // Array for decorative sky bullets (background effect)
@@ -396,9 +396,11 @@ void game_main() {
     // Update high score if needed and save user data
     if (current_user.score > current_user.high_score) {
         current_user.high_score = current_user.score;
-        save_user_info(current_user);  // Save with new high score
+        check_score(current_user);
+  // Save with new high score
     } else {
-        save_user_info(current_user);  // Save current session data
+       check_score(current_user);
+ // Save current session data
     }
     
     // Display game over screen and cleanup

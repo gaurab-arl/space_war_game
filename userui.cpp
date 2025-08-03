@@ -4,7 +4,6 @@
 #include "collision.h"
 
 int x = 0, y = 0;
-User current_user;
 
 void background_image() {
    readimagefile("deep_space_background.bmp", 0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
@@ -29,7 +28,7 @@ void give_name() {
     // Draw outer input box
     setcolor(WHITE);
     rectangle(277, 181, 888, 605);
-    setfillstyle(SOLID_FILL, LIGHTGRAY);
+    setfillstyle(SOLID_FILL, LIGHTGRAY);       
     bar(278, 182, 887, 604);
 
     // Draw inner black box
