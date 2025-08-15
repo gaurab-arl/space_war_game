@@ -85,6 +85,7 @@ void score_increase(User &current_user) {
         char msg[100];
         sprintf(msg, "Level up! Speed increased!");
 
+
         // Optional: Draw box behind message
         setfillstyle(SOLID_FILL, BLACK);
         bar(SCREEN_WIDTH / 2 - 160, SCREEN_HEIGHT / 2 - 20, SCREEN_WIDTH / 2 + 160, SCREEN_HEIGHT / 2 + 30);

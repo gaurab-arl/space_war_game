@@ -1,6 +1,3 @@
-dfsfasfs 0
-gaurab 50
-gaurav 340
-tulsa 40
-tulsa 80
-tulsa   180
+void 110
+gaurab 230
+tulsa 130
