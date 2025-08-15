@@ -1,5 +1,4 @@
 #include <graphics.h>
-#include <iostream>
 #include "userui.h"
 #include "gameui.h"
 #include "fileop.h"

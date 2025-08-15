@@ -6,8 +6,6 @@
 #include "fileop.h"
 #include "collision.h" // defines the User struct
 
-#include <iostream>
-using namespace std;
 
 struct HistoryUser {
     char name[100];

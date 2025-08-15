@@ -29,7 +29,7 @@ IncludeVersionInfo=0
 SupportXPThemes=0
 CompilerSet=3
 CompilerSettings=0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;2;0;0;0
-UnitCount=10
+UnitCount=9
 
 [VersionInfo]
 Major=1
@@ -71,13 +71,14 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit4]
-FileName=note.txt
+FileName=fileop.h
 Folder=
-Compile=0
-Link=0
+Compile=1
+Link=1
 Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
+CompileCpp=1
 
 [Unit1]
 FileName=main.cpp
@@ -90,16 +91,6 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit5]
-FileName=fileop.h
-CompileCpp=1
-Folder=
-Compile=1
-Link=1
-Priority=1000
-OverrideBuildCmd=0
-BuildCmd=
-
-[Unit6]
 FileName=fileop.cpp
 CompileCpp=1
 Folder=
@@ -109,7 +100,7 @@ Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
 
-[Unit7]
+[Unit6]
 FileName=gameui.h
 CompileCpp=1
 Folder=
@@ -119,7 +110,7 @@ Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
 
-[Unit8]
+[Unit7]
 FileName=gameui.cpp
 CompileCpp=1
 Folder=
@@ -129,8 +120,18 @@ Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
 
-[Unit9]
+[Unit8]
 FileName=collision.cpp
+CompileCpp=1
+Folder=
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit9]
+FileName=collision.h
 CompileCpp=1
 Folder=
 Compile=1

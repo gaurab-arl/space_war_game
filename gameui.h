@@ -2,8 +2,6 @@
 #define GAMEUI_H
 
 #include <graphics.h>
-#include <ctime>
-#include <cstdlib>
 
 #include <time.h>
 #include <windows.h>
