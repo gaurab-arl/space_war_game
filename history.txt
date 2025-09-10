@@ -1,6 +1,5 @@
 void 110
 gaurab 230
-tulsa 130
-void 1
-20 0
-swostika 40
+player 50
+Gaurab 0
+Gaurab  0

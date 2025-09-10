@@ -7,7 +7,6 @@ int total_users = 0;
 
 User current_user;
 
-
 void check_score(const User& current_user) {
     FILE* fp = fopen("history.txt", "r");
     total_users = 0;

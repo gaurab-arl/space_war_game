@@ -6,7 +6,7 @@
 int x = 0, y = 0;
 
 void background_image() {
-   readimagefile("deep_space_background.bmp", 0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
+   readimagefile("images/deep_space_background.bmp", 0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
 }
 
 void title() {

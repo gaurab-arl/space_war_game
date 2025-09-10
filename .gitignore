@@ -1,1 +1,9 @@
+# Ignore compiled object files
+*.o
+
+# Ignore executables
 *.exe
+
+# Ignore IDE-specific files
+*.layout
+
