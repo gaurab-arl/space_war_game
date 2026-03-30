@@ -28,6 +28,15 @@ The game features enemies, bullets, player health, score system and history trac
 
 ---
 
+## 🕹 Controls
+
+| Key | Action |
+|-----|--------|
+| ↑ ↓ ← → | Move spaceship |
+| Space | Shoot bullets |
+
+---
+
 ## 🖼️ Screenshots
 
 | User Menu | Game Screen | Game Over |
