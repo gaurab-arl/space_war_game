@@ -101,5 +101,5 @@ double click on .dev (if on dev-C++ IDE)
 
 ## 🙌 Credits
 
-Developed by Gaurab Aryal
+Developed by Gaurab Aryal , Tulsa Bhat
 (With guidance, learning, and experimentation in graphics programming)
